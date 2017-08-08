@@ -1,0 +1,64 @@
+/*
+Theme Name: clean-blog
+Theme URI:https://www.coderrub.com
+Author: Md. Rubel Ali
+Author URI: https://www.facebook.com/coderrub
+Description: This is a wordpress clean_blog site,
+Tags: WordPress_site, Clean_blog_site,
+version: 0.2
+License: coderrubel
+License URI:https://www.coderrub.me
+Text Domain: clean_blog
+*/
+.wp-caption, 
+.wp-caption-text, 
+.sticky, 
+.gallery-caption, 
+.aligncenter{
+ margin:0;
+ padding:0;
+ max-width:100% !important;
+}
+.menu-menu-1-container ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.menu-menu-1-container ul li{
+    list-style: none;
+    float: left;
+    padding-top: 5px;
+}
+.menu-menu-1-container ul li a{
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+}
+.menu-menu-1-container ul li a:hover{
+    color:aqua;
+}
+.page-heading{
+    padding-bottom: 0px!important;
+    padding-top: 25%!important;
+    
+}
+
+.post-categories li{
+    list-style: none;
+    padding-left: 10px;
+    float: right;
+}
+.post-categories li a{
+    color: cornflowerblue;
+    font-size: 22px;
+    text-decoration: none;
+}
+.featured_img img{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
