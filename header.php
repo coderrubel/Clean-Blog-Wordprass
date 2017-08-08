@@ -35,7 +35,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('headerimge'); ?>" style="  width: 90px; height:30px; cursor: pointer; border-radius: 20px;" ></a>
+                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('headerimge'); ?>" alt="headerimg" style="  width: 90px; height:30px; cursor: pointer; border-radius: 20px;" ></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
