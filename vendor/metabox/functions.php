@@ -1,5 +1,5 @@
 <?php 
-function cleanblogmetabox(array $cleanbox){
+function cmb_page(array $cleanbox){
     
     $cleanbox[] = array(
       'id'=> 'custommetabox',
@@ -20,7 +20,7 @@ function cleanblogmetabox(array $cleanbox){
     );
     return $cleanbox;
 }
-add_filter('cmb2_meta_boxes','cleanblogmetabox');
+add_filter('cmb2_meta_boxes','cmb_page');
 
 // This is posts meta box 
 

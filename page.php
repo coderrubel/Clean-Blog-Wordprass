@@ -5,6 +5,19 @@ $prefix = 'clean_blog';
 ?>
 
     <!-- Main Content -->
+    
+
+    <hr>
+    
+     
+    <?php 
+    if(is_page('contact') || is_page('CONTACT')  ){ ?>
+    <h1>Add Your Contact From Plugin </h1>
+    <?php
+        
+    }
+    else{ ?>
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-lg-offset-0 col-md-11 col-md-offset-1" style="color:<?php echo get_post_meta(get_the_ID(),'contentcolor',TRUE); ?>">
@@ -26,8 +39,12 @@ $prefix = 'clean_blog';
             </div>
         </div>
     </div>
-
-    <hr>
-
+    
+    <?php
+        
+    }
+    
+?>
+     <hr>
     <!-- Footer -->
    <?php get_footer(); ?>

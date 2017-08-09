@@ -7,7 +7,7 @@
 
 <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
                 <div class="post-preview">
                
                     
@@ -15,10 +15,12 @@
                     
                     <?php while(have_posts()): the_post(); ?>
                 
+                    <div class="custom_post">
                         <h2 class="post-title" style="color:<?php echo get_post_meta(get_the_ID(),'cmd_post_title',TRUE) ?>">
                            <?php the_title(); ?>
                         </h2>
-                    <div class="featured_img"><?php the_post_thumbnail(); ?></div>
+                        <?php the_post_thumbnail(); ?>
+                    </div>
                         <h3 class="post-subtitle">
                             <?php the_content(); ?>
                         </h3>
@@ -44,6 +46,8 @@
                     echo '<a href="'.$clink.'">'.$mycatagoris.'</a> ';
                     
                     ?>
+                    
+                    
                     
                     
                     <?php endwhile; ?>
