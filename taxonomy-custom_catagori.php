@@ -7,7 +7,7 @@ $prefix = 'clean_blog';
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-lg-offset-0 col-md-11 col-md-offset-1" style="color:<?php echo get_post_meta(get_the_ID(),'contentcolor',TRUE); ?>">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="color:<?php echo get_post_meta(get_the_ID(),'contentcolor',TRUE); ?>">
                
                 <?php while(have_posts()): the_post(); ?>
                 <?php the_content(); ?>
@@ -30,4 +30,3 @@ $prefix = 'clean_blog';
     <hr>
 
     <!-- Footer -->
-   <?php get_footer(); ?>

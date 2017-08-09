@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php get_header();
+
+
+
+?>
    
 
 <div class="container">
@@ -20,6 +24,28 @@
                         </h3>
                     
                     <p class="post-meta">Posted by <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a> on <?php the_time('F m, Y'); ?></p>
+                    
+                    Topics: <?php
+                    $topic = get_the_terms(get_the_ID(),'custom_taxonomy');
+                    foreach ($topic as $topics){
+                        $topiclist = $topics->name ;
+                    $link = get_term_link($topics,'custom_taxonomy');
+                    
+                    echo '<a href="'.$link.'">'.$topiclist.'</a>, ';
+                    }
+                   ?>
+                   
+                    Catagori: 
+                    <?php
+                    $catagori = get_the_terms(get_the_ID(),'custom_catagori');
+                    foreach($catagori as $catagoris);
+                    $mycatagoris = $catagoris->name;
+                    $clink = get_term_link($catagoris,'custom_catagori');
+                    echo '<a href="'.$clink.'">'.$mycatagoris.'</a> ';
+                    
+                    ?>
+                    
+                    
                     <?php endwhile; ?>
                 </div>
                 <hr>

@@ -12,8 +12,8 @@ function cleanblogmetabox(array $cleanbox){
                 'type'=>'file',
             ),
             array(
-              'name'=>'Color',
-                'id'=>'showdate',
+              'name'=>'Content Color',
+                'id'=>'contentcolor',
                 'type'=>'colorpicker',
             ),
         )

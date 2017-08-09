@@ -6,8 +6,8 @@ add_theme_support('post-thumbnails');
 
 register_nav_menu('main_menu', 'Main');
 
-
-register_post_type('custom_post', array(
+//custom post
+register_post_type('custompost', array(
     'labels' => array(
         'name' => 'Custom Post',
         'description' => 'You can add your post here',
@@ -15,6 +15,25 @@ register_post_type('custom_post', array(
     'public' => true,
     'supports' => array('title', 'editor', 'thumbnail', 'comments'),
 ));
+
+register_taxonomy('custom_taxonomy','custompost',array(
+   'labels'=>array(
+       'name'=>'Topics',
+       'add_new_item'=>'Add New Topics',
+       'parent_item'=>'Add New Parent Topics',
+       
+   ),
+    'public'=>true,
+    'hierarchical'=>TRUE
+));
+
+register_taxonomy('custom_catagori','custompost',array(
+   'labels'=>array(
+       'name'=>'Post Catagori',
+   ) ,
+    'public'=>TRUE,
+));
+
 //sidebar
 
 function sidebar(){
