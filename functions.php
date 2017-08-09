@@ -176,5 +176,19 @@ function custom_color($coloroption) {
 add_action('customize_register', 'custom_color');
 
 
+function theme_option(){
+    add_settings_field('header',' Copy Right Text','header_text_input','general');
+    
+    register_setting('general','header');
+}
+add_action('admin_init','theme_option');
+
+
+function header_text_input(){
+    echo '<input type="text" class="regular-text" name="header" value="'.get_option('header').'">';
+}
+
+
+
 require_once ('vendor/metabox/init.php');
 require_once ('vendor/metabox/functions.php');
